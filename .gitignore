@@ -94,5 +94,7 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 
+# Firebase Config
+Jukebox/GoogleService-Info.plist
 
 # End of https://www.gitignore.io/api/macos,swift,cocoapods
