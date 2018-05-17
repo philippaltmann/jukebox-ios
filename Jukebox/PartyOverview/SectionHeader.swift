@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HeaderCollectionReusableView: UICollectionReusableView {
+class SectionHeader: UICollectionReusableView {
         
     @IBOutlet weak var Label: UILabel!
-    @IBAction func Add(_ sender: Any) {
-    }
+    @IBOutlet weak var Button: UIButton!
+    
 }

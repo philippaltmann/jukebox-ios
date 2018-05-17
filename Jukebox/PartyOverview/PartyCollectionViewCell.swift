@@ -10,4 +10,6 @@ import UIKit
 
 class PartyCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var Label: UILabel!
+    @IBOutlet weak var Image: UIImageView!
 }

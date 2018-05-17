@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 private let reuseIdentifier = "Cell"
 
+
 class PartyCollectionViewController: UICollectionViewController {
 
+    var ref: DatabaseReference!
+    var hostParties:[NSDictionary] = []
+    var guestParties:[NSDictionary] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,10 +27,47 @@ class PartyCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        //self.collectionView!.reg
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        self.ref = Database.database().reference()
+        /*let sampleParty: NSDictionary = [
+            "Name" : "Another Lit Party",
+            "Host" : Auth.auth().currentUser?.uid,
+            "Date" : "18.05.2018"
+        ]
+        self.ref.child("parties").childByAutoId().setValue(sampleParty)*/
+        
+        
+        getParties()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func getParties() -> Void {
+        
+        let userID = Auth.auth().currentUser?.uid
+        if userID == nil {
+            return
+        }
+        
+        ref.child("users/\(userID!)/parties").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let parties = snapshot.value as? NSDictionary
+            //print(value)
+            parties?.forEach({ (arg: (key: Any, value: Any)) in
+                let (key, value) = arg
+                self.ref.child("parties/\(key)").observeSingleEvent(of: .value, with: { (snapshot) in
+                    // Get user value
+                    switch value as! String{
+                    case "host":
+                        self.hostParties.append((snapshot.value as? NSDictionary)!)
+                    default:
+                        self.guestParties.append((snapshot.value as? NSDictionary)!)
+                    }
+                    self.collectionView?.reloadData()
+                }) {(error) in print(error.localizedDescription)}
+            })
+        }) {(error) in print(error.localizedDescription)}
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,25 +96,68 @@ class PartyCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        /*switch section {
-        case 1:
-            <#code#>
+        switch section {
+        case 0:
+            return self.hostParties.count
         default:
-            <#code#>
-        }*/
-        print("3 cells")
-        return 3
+            return self.guestParties.count
+        }
     }
-    
-    coll
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        cell.backgroundColor = UIColor.blue
         
-        // Configure the cell
-        print("Configuring")
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier,
+                                                      for: indexPath) as! PartyCollectionViewCell
+        
+        if indexPath.item >= hostParties.count{
+            let index = indexPath.item - hostParties.count
+            // Get Image from Firebase Store
+            let imagePath = guestParties[index].object(forKey: "imagePath") as! String
+            let imageReference = Storage.storage().reference(withPath: imagePath)
+            imageReference.getData(maxSize: 1 * 512 * 512) { data, error in
+                if let error = error {print(error)}
+                else { cell.Image.image = UIImage(data: data!) }
+            }
+            cell.Label.text = guestParties[index].object(forKey: "Name") as! String
+        } else {
+            // Get Image from Firebase Store
+            let imagePath = hostParties[indexPath.item].object(forKey: "imagePath") as! String
+            let imageReference = Storage.storage().reference(withPath: imagePath)
+            imageReference.getData(maxSize: 1 * 512 * 512) { data, error in
+                if let error = error {print(error)}
+                else { cell.Image.image = UIImage(data: data!) }
+            }
+            cell.Label.text = hostParties[indexPath.item].object(forKey: "Name") as! String
+        }
+        
+        
+        
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath) as? SectionHeader{
+            switch indexPath.section{
+            case 0:
+                sectionHeader.Label.text = "Parties you Host"
+                sectionHeader.Button.addTarget(self, action: #selector(self.createParty), for: .touchUpInside)
+            default:
+                sectionHeader.Label.text = "Parties you Attend"
+                sectionHeader.Button.addTarget(self, action: #selector(self.joinParty), for: .touchUpInside)
+            }
+            //sectionHeader.Label.text = "Section \(indexPath.section)"
+            return sectionHeader
+        }
+        return UICollectionReusableView()
+    }
+    
+    @objc func createParty() -> Void{
+        self.performSegue(withIdentifier: "createParty", sender: self)
+    }
+    
+    @objc func joinParty() -> Void{
+        self.performSegue(withIdentifier: "joinParty", sender: self)
     }
 
     // MARK: UICollectionViewDelegate

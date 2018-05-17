@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iha-4q-nIu">
-    <device id="retina5_9" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MJV-Gs-deF">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -11,68 +11,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile View Controller-->
-        <scene sceneID="qhI-co-wfY">
-            <objects>
-                <viewController id="2VA-V5-VHs" customClass="ProfileViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Tza-ej-fch">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logged in as &lt;Name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYp-cC-vn7">
-                                <rect key="frame" x="16" y="101" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connected to Spotify User &lt;SPTUsername&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lb-Wx-sbv">
-                                <rect key="frame" x="16" y="130" width="339" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7C-dj-cwd">
-                                <rect key="frame" x="16" y="159" width="166" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Disconnect from Spotify"/>
-                                <connections>
-                                    <action selector="disconnectSpotify" destination="2VA-V5-VHs" eventType="touchUpInside" id="5qP-Wp-29o"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFu-yq-PeF">
-                                <rect key="frame" x="16" y="221" width="48" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logout:" destination="2VA-V5-VHs" eventType="touchUpInside" id="vg2-KL-kn3"/>
-                                </connections>
-                            </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFM-o3-tjQ">
-                                <rect key="frame" x="-2" y="44" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Pofile" id="0Mw-CG-uCo">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="6NS-qP-bpW"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" name="SolidGrey800"/>
-                        <viewLayoutGuide key="safeArea" id="MLu-7g-LDk"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gJE-B0-xCU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1012" y="-288"/>
-        </scene>
         <!--Jukebox-->
         <scene sceneID="S3N-Ol-dmk">
             <objects>
                 <collectionViewController id="MJV-Gs-deF" customClass="PartyCollectionViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="vIA-zW-QdB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="SolidGrey800"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4oi-6T-B9P">
@@ -82,7 +26,7 @@
                             <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="L15-Pp-pkZ">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Cell" id="L15-Pp-pkZ" customClass="PartyCollectionViewCell" customModule="Jukebox" customModuleProvider="target">
                                 <rect key="frame" x="16" y="50" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -96,12 +40,23 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2l-2i-Suu">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="70"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" name="SolidBlue500"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="70"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="Image" destination="T2l-2i-Suu" id="Hoi-GF-d3F"/>
+                                    <outlet property="Label" destination="dh3-3P-HnM" id="6rc-Yr-Lum"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Header" id="Ci3-CX-VOR" customClass="SectionHeader" customModule="Jukebox" customModuleProvider="target">
@@ -143,29 +98,25 @@
                     <navigationItem key="navigationItem" title="Jukebox" id="cIw-or-vAu">
                         <barButtonItem key="leftBarButtonItem" image="UserIcon" id="RQm-Am-hsR">
                             <connections>
-                                <segue destination="2VA-V5-VHs" kind="presentation" id="yaH-eQ-zut"/>
+                                <segue destination="2gd-AY-uLX" kind="presentation" customClass="LTRSegue" customModule="Jukebox" customModuleProvider="target" id="yaH-eQ-zut"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="s8y-br-0Yb" kind="popoverPresentation" identifier="createParty" id="nnb-rO-yg5">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
-                        <segue destination="Qqn-oM-MYH" kind="popoverPresentation" identifier="joinParty" id="ml7-Ab-3CW">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="s8y-br-0Yb" kind="presentation" identifier="createParty" id="nnb-rO-yg5"/>
+                        <segue destination="Qqn-oM-MYH" kind="presentation" identifier="joinParty" id="ml7-Ab-3CW"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aex-xX-hYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1012" y="-1066"/>
+            <point key="canvasLocation" x="-1012" y="-1066.4167916041979"/>
         </scene>
-        <!--View Controller-->
+        <!--Join Party View Controller-->
         <scene sceneID="ef7-l0-NTB">
             <objects>
-                <viewController id="Qqn-oM-MYH" sceneMemberID="viewController">
+                <viewController id="Qqn-oM-MYH" customClass="JoinPartyViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3T9-E1-9yB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Join" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5g-hX-p2u">
@@ -179,6 +130,9 @@
                                 <rect key="frame" x="169" y="474" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done:" destination="Qqn-oM-MYH" eventType="touchUpInside" id="wMT-6Y-jAd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="SolidGrey800"/>
@@ -189,25 +143,28 @@
             </objects>
             <point key="canvasLocation" x="-228" y="-730"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Party View Controller-->
         <scene sceneID="3qu-6z-vis">
             <objects>
-                <viewController id="s8y-br-0Yb" sceneMemberID="viewController">
+                <viewController id="s8y-br-0Yb" customClass="CreatePartyViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YjA-Jp-Vl2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATF-Ha-FBP">
                                 <rect key="frame" x="166" y="396" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOm-rv-pPX">
-                                <rect key="frame" x="169" y="614" width="37" height="30"/>
+                                <rect key="frame" x="169" y="425" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="done:" destination="s8y-br-0Yb" eventType="touchUpInside" id="XGj-dT-jf0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="SolidGrey800"/>
@@ -218,40 +175,13 @@
             </objects>
             <point key="canvasLocation" x="-228" y="-1397"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="yUR-hi-221">
+        <!--UserProfile-->
+        <scene sceneID="RNI-Gd-ya1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iha-4q-nIu" customClass="MainViewController" customModule="Jukebox" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="rsy-Zm-af1">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" name="SolidBlue500"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8VB-1O-DqG">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="izI-jM-Abi" kind="show" identifier="showLogin" id="hLR-IA-uTB"/>
-                        <segue destination="MJV-Gs-deF" kind="relationship" relationship="rootViewController" id="bTk-88-Zih"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LFX-Q4-HI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="UserProfile" id="2gd-AY-uLX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPh-kM-Ir8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1866.4000000000001" y="-1065.5172413793105"/>
-        </scene>
-        <!--AuthView-->
-        <scene sceneID="MuD-GJ-r37">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Auth" referencedIdentifier="AuthView" id="izI-jM-Abi" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v71-96-pwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1867" y="-578"/>
+            <point key="canvasLocation" x="-1012" y="-288"/>
         </scene>
     </scenes>
     <resources>
@@ -259,9 +189,6 @@
         <image name="UserIcon" width="24" height="24"/>
         <namedColor name="SolidBlue500">
             <color red="0.19599999487400055" green="0.38400000333786011" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SolidBlue500">
-            <color red="0.1959999949" green="0.3840000033" blue="0.56900000569999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SolidGrey800">
             <color red="0.13300000131130219" green="0.15299999713897705" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
