@@ -31,9 +31,20 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
         
         imagePicker.delegate = self
         
+        //Set Vertical Center
+        let dist:CGFloat = 214.0
+        let diff:CGFloat = UIScreen.main.bounds.height/2 - dist
+        self.keyboardHeightLayoutConstraint.constant = diff
+        
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         profilePicture.isUserInteractionEnabled = true
         profilePicture.addGestureRecognizer(tapGestureRecognizer)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(self.dismissKeyboard (_:)))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
         
         name.delegate = self
         name.tag = 0
@@ -52,18 +63,22 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
                     profilePicture.image = UIImage(data: data)
                 }
             }
-            if user?.emailAddress != nil {
-                email.text = user?.emailAddress
-            }
-        } else {
-            print("Did not load user")
-        }
+            //if user?.emailAddress != nil {
+                email.text = user?.emailAddress ?? ""
+            //}
+        } else {print("Did not load user")}
         
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardNotification(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillChangeFrame,
                                                object: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        name.resignFirstResponder()
+        email.resignFirstResponder()
+        password.resignFirstResponder()
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
@@ -101,22 +116,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
     
     @objc func keyboardNotification(notification: NSNotification) {
         if let userInfo = notification.userInfo {
-            let endFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-            let endFrameY = endFrame?.origin.y ?? 0
-            let duration:TimeInterval = (userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue ?? 0
-            let animationCurveRawNSN = userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber
-            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue
-            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: animationCurveRaw)
-            if endFrameY >= UIScreen.main.bounds.size.height {
-                self.keyboardHeightLayoutConstraint?.constant = 193.0
+            let basePosition:CGFloat = 214.0
+            let screenHeight:CGFloat = UIScreen.main.bounds.size.height
+            let keyboardPosY:CGFloat = ((userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.origin.y)!
+            let duration:TimeInterval = ((userInfo[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue)!
+            let animationCurve:UIViewAnimationOptions = UIViewAnimationOptions(rawValue: ((userInfo[UIKeyboardAnimationCurveUserInfoKey] as? NSNumber)?.uintValue ?? UIViewAnimationOptions.curveEaseInOut.rawValue)!)
+            if keyboardPosY >= screenHeight {
+                self.keyboardHeightLayoutConstraint?.constant = screenHeight / 2 - basePosition
             } else {
-                self.keyboardHeightLayoutConstraint?.constant = endFrame?.size.height ?? 193.0
+                self.keyboardHeightLayoutConstraint?.constant = screenHeight - keyboardPosY + 8.0
             }
-            UIView.animate(withDuration: duration,
-                           delay: TimeInterval(0),
-                           options: animationCurve,
-                           animations: { self.view.layoutIfNeeded() },
-                           completion: nil)
+            UIView.animate(withDuration: duration,delay: TimeInterval(0),options: animationCurve,
+                           animations: { self.view.layoutIfNeeded() },completion: nil)
         }
     }
     
@@ -142,10 +153,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
                 let OKAction = UIAlertAction(title: "OK", style: .default) { action in }
                 alertController.addAction(OKAction)
                 self.present(alertController, animated: true)
+                return
             }
             print("Registered?!")
             print(error?.localizedDescription ?? "Not Defined")
             print(user?.email ?? "Mail Not defined")
+            
+            Auth.auth().addStateDidChangeListener({ (auth:Auth, user:User?) in
+                print(auth)
+                print(user?.displayName)
+            })
             
             //Update Name
             let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
@@ -156,9 +173,10 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
                 print("Welcome, \(user?.displayName)")
             }
             
+            //let user:NSObject = {,"name": self.name.text}
             
             //Update Picture
-            self.uploadProfilePicture(userId: (user?.uid)!)
+            //self.uploadProfilePicture(userId: (user?.uid)!)
             
             /*
              

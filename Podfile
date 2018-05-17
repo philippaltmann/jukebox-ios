@@ -7,6 +7,7 @@ target 'Jukebox' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  pod 'Firebase/Database'
   # Pods for test
 
   target 'JukeboxTests' do
