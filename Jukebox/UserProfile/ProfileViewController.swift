@@ -39,6 +39,9 @@ class ProfileViewController: UIViewController {
         self.present(alertController, animated: true)
     }
 
+    @IBAction func done(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
