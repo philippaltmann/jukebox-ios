@@ -25,6 +25,16 @@
 		1762A2DF2090FDC4003C868A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762A2DE2090FDC4003C868A /* Constants.swift */; };
 		1762A2E120910290003C868A /* NotificationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762A2E020910290003C868A /* NotificationConstants.swift */; };
 		1762A2E3209105B2003C868A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762A2E2209105B2003C868A /* LoginViewController.swift */; };
+		1778DEC620A8895D001454C3 /* PartyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1778DEC520A8895D001454C3 /* PartyCollectionViewCell.swift */; };
+		17CB208520A329DA003F1AAE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CB208420A329DA003F1AAE /* Auth.storyboard */; };
+		17CB208720A33682003F1AAE /* PartyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CB208620A33682003F1AAE /* PartyCollectionViewController.swift */; };
+		17CB208A20A33C3C003F1AAE /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CB208920A33C3C003F1AAE /* SectionHeader.swift */; };
+		17CB208E20A34332003F1AAE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CB208D20A34332003F1AAE /* ProfileViewController.swift */; };
+		17CB209120A34BBF003F1AAE /* CreatePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CB209020A34BBF003F1AAE /* CreatePartyViewController.swift */; };
+		17CB209320A34BCD003F1AAE /* JoinPartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CB209220A34BCD003F1AAE /* JoinPartyViewController.swift */; };
+		17CB209620A34C1D003F1AAE /* PartyOverview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CB209520A34C1D003F1AAE /* PartyOverview.storyboard */; };
+		17CB209820A34C35003F1AAE /* UserProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CB209720A34C35003F1AAE /* UserProfile.storyboard */; };
+		17CB209D20A35015003F1AAE /* LTRSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CB209C20A35015003F1AAE /* LTRSegue.swift */; };
 		17E4770F209335B30055BB04 /* AuthBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E4770E209335B30055BB04 /* AuthBack.swift */; };
 		17E477132093687E0055BB04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E477122093687E0055BB04 /* MainViewController.swift */; };
 		17E477172094AF240055BB04 /* AudioStreamingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E477162094AF240055BB04 /* AudioStreamingDelegate.swift */; };
@@ -81,6 +91,16 @@
 		1762A2DE2090FDC4003C868A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1762A2E020910290003C868A /* NotificationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationConstants.swift; sourceTree = "<group>"; };
 		1762A2E2209105B2003C868A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1778DEC520A8895D001454C3 /* PartyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCollectionViewCell.swift; sourceTree = "<group>"; };
+		17CB208420A329DA003F1AAE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		17CB208620A33682003F1AAE /* PartyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyCollectionViewController.swift; sourceTree = "<group>"; };
+		17CB208920A33C3C003F1AAE /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		17CB208D20A34332003F1AAE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		17CB209020A34BBF003F1AAE /* CreatePartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePartyViewController.swift; sourceTree = "<group>"; };
+		17CB209220A34BCD003F1AAE /* JoinPartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinPartyViewController.swift; sourceTree = "<group>"; };
+		17CB209520A34C1D003F1AAE /* PartyOverview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PartyOverview.storyboard; sourceTree = "<group>"; };
+		17CB209720A34C35003F1AAE /* UserProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserProfile.storyboard; sourceTree = "<group>"; };
+		17CB209C20A35015003F1AAE /* LTRSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LTRSegue.swift; sourceTree = "<group>"; };
 		17E4770E209335B30055BB04 /* AuthBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBack.swift; sourceTree = "<group>"; };
 		17E477122093687E0055BB04 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		17E477162094AF240055BB04 /* AudioStreamingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioStreamingDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +161,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17440D8720A324FC006D2B02 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				17CB208420A329DA003F1AAE /* Auth.storyboard */,
+				1762A2992090B3B1003C868A /* SpotifyAuthViewController.swift */,
+				17363A972096012A00DE7187 /* RegisterViewController.swift */,
+				1762A2E2209105B2003C868A /* LoginViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		1762A28B2090B3B1003C868A = {
 			isa = PBXGroup;
 			children = (
@@ -166,23 +197,23 @@
 		1762A2962090B3B1003C868A /* Jukebox */ = {
 			isa = PBXGroup;
 			children = (
-				1762A2C92090B8A7003C868A /* GoogleService-Info.plist */,
-				1762A2972090B3B1003C868A /* AppDelegate.swift */,
-				17E477162094AF240055BB04 /* AudioStreamingDelegate.swift */,
-				1762A2992090B3B1003C868A /* SpotifyAuthViewController.swift */,
-				17363A972096012A00DE7187 /* RegisterViewController.swift */,
-				17E477122093687E0055BB04 /* MainViewController.swift */,
-				1762A2E2209105B2003C868A /* LoginViewController.swift */,
-				1762A29B2090B3B1003C868A /* Main.storyboard */,
-				1762A29E2090B3B2003C868A /* Assets.xcassets */,
+				17440D8720A324FC006D2B02 /* Auth */,
+				17CB208820A33C06003F1AAE /* PartyOverview */,
+				17CB209420A34BEA003F1AAE /* UserProfile */,
 				1762A2A02090B3B2003C868A /* LaunchScreen.storyboard */,
+				1762A2972090B3B1003C868A /* AppDelegate.swift */,
+				1762A29B2090B3B1003C868A /* Main.storyboard */,
+				17E477122093687E0055BB04 /* MainViewController.swift */,
+				17E477162094AF240055BB04 /* AudioStreamingDelegate.swift */,
+				1762A29E2090B3B2003C868A /* Assets.xcassets */,
 				1762A2A32090B3B2003C868A /* Info.plist */,
-				1762A2DB2090D861003C868A /* BridgeViewController.h */,
-				1762A2DC2090D861003C868A /* BridgeViewController.m */,
-				1762A2DA2090D860003C868A /* Jukebox-Bridging-Header.h */,
+				1762A2C92090B8A7003C868A /* GoogleService-Info.plist */,
 				1762A2DE2090FDC4003C868A /* Constants.swift */,
 				1762A2E020910290003C868A /* NotificationConstants.swift */,
 				17E4770E209335B30055BB04 /* AuthBack.swift */,
+				17CB208F20A34670003F1AAE /* Spotify SDK */,
+				17CB209B20A34EEE003F1AAE /* whateverThisDoes */,
+				1762A2DA2090D860003C868A /* Jukebox-Bridging-Header.h */,
 				17E477182094C5660055BB04 /* PlaylistsViewController.swift */,
 				17E4771A2094FBA80055BB04 /* PlaylistCollectionViewController.swift */,
 			);
@@ -205,6 +236,45 @@
 				1762A2B92090B3B2003C868A /* Info.plist */,
 			);
 			path = JukeboxUITests;
+			sourceTree = "<group>";
+		};
+		17CB208820A33C06003F1AAE /* PartyOverview */ = {
+			isa = PBXGroup;
+			children = (
+				17CB209520A34C1D003F1AAE /* PartyOverview.storyboard */,
+				17CB208620A33682003F1AAE /* PartyCollectionViewController.swift */,
+				17CB208920A33C3C003F1AAE /* SectionHeader.swift */,
+				1778DEC520A8895D001454C3 /* PartyCollectionViewCell.swift */,
+				17CB209020A34BBF003F1AAE /* CreatePartyViewController.swift */,
+				17CB209220A34BCD003F1AAE /* JoinPartyViewController.swift */,
+			);
+			path = PartyOverview;
+			sourceTree = "<group>";
+		};
+		17CB208F20A34670003F1AAE /* Spotify SDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Spotify SDK";
+			sourceTree = "<group>";
+		};
+		17CB209420A34BEA003F1AAE /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				17CB209720A34C35003F1AAE /* UserProfile.storyboard */,
+				17CB208D20A34332003F1AAE /* ProfileViewController.swift */,
+				17CB209C20A35015003F1AAE /* LTRSegue.swift */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		17CB209B20A34EEE003F1AAE /* whateverThisDoes */ = {
+			isa = PBXGroup;
+			children = (
+				1762A2DB2090D861003C868A /* BridgeViewController.h */,
+				1762A2DC2090D861003C868A /* BridgeViewController.m */,
+			);
+			path = whateverThisDoes;
 			sourceTree = "<group>";
 		};
 		32DA4E7A4D55159C3BA86C80 /* Frameworks */ = {
@@ -353,8 +423,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CB209820A34C35003F1AAE /* UserProfile.storyboard in Resources */,
+				17CB209620A34C1D003F1AAE /* PartyOverview.storyboard in Resources */,
 				1762A2A22090B3B2003C868A /* LaunchScreen.storyboard in Resources */,
 				1762A2CA2090B8A7003C868A /* GoogleService-Info.plist in Resources */,
+				17CB208520A329DA003F1AAE /* Auth.storyboard in Resources */,
 				1762A29F2090B3B2003C868A /* Assets.xcassets in Resources */,
 				1762A29D2090B3B1003C868A /* Main.storyboard in Resources */,
 			);
@@ -440,12 +513,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Jukebox/Pods-Jukebox-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,16 +535,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CB208A20A33C3C003F1AAE /* SectionHeader.swift in Sources */,
 				1762A2E3209105B2003C868A /* LoginViewController.swift in Sources */,
 				1762A2E120910290003C868A /* NotificationConstants.swift in Sources */,
 				1762A2DF2090FDC4003C868A /* Constants.swift in Sources */,
 				17363A982096012A00DE7187 /* RegisterViewController.swift in Sources */,
 				17E4771B2094FBA80055BB04 /* PlaylistCollectionViewController.swift in Sources */,
+				17CB208720A33682003F1AAE /* PartyCollectionViewController.swift in Sources */,
 				17E477192094C5660055BB04 /* PlaylistsViewController.swift in Sources */,
 				1762A2DD2090D861003C868A /* BridgeViewController.m in Sources */,
 				17E477172094AF240055BB04 /* AudioStreamingDelegate.swift in Sources */,
+				17CB209D20A35015003F1AAE /* LTRSegue.swift in Sources */,
 				1762A29A2090B3B1003C868A /* SpotifyAuthViewController.swift in Sources */,
 				17E4770F209335B30055BB04 /* AuthBack.swift in Sources */,
+				17CB208E20A34332003F1AAE /* ProfileViewController.swift in Sources */,
+				17CB209120A34BBF003F1AAE /* CreatePartyViewController.swift in Sources */,
+				1778DEC620A8895D001454C3 /* PartyCollectionViewCell.swift in Sources */,
+				17CB209320A34BCD003F1AAE /* JoinPartyViewController.swift in Sources */,
 				1762A2982090B3B1003C868A /* AppDelegate.swift in Sources */,
 				17E477132093687E0055BB04 /* MainViewController.swift in Sources */,
 			);

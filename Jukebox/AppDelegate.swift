@@ -30,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let auth:SPTAuth! = SPTAuth.defaultInstance()
         let stream:SPTAudioStreamingController! = SPTAudioStreamingController.sharedInstance()
        
-        
         //Configure Spotify ID, scope and keys + redirect, swap, refresh URLs
         auth.clientID = SpotifyConfig.clientID
         auth.redirectURL = SpotifyConfig.redirectURI
@@ -44,27 +43,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         stream.delegate = streamingDelegate
         
         // Start the spotify player
-        do {
-            try stream.start(withClientId: SpotifyConfig.clientID)
+        do { try stream.start(withClientId: SpotifyConfig.clientID)
         } catch { fatalError("Couldn't start Spotify SDK") }
         
-        /*if let session = auth.session {
+        if let session = auth.session {
             if session.isValid(){
                 stream.login(withAccessToken: session.accessToken)
             } else {
                 auth.renewSession(auth.session) { (error, session) in
                     //Check if there is an error because then there won't be a session.
-                    if let error = error {
-                        print(error)
-                        return
-                    }
+                    if let error = error { print(error); return }
                     // Check if there is a session
                     if let session = session {
                         stream.login(withAccessToken: session.accessToken)
                     }
                 }
             }
-        }*/
+        }
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
