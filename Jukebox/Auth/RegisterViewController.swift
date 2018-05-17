@@ -163,7 +163,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate, UIImagePick
                 print(auth)
                 print(user?.displayName)
             })
-            
+            //TODO create user reference in database 
             //Update Name
             let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
             changeRequest?.displayName = self.name.text
