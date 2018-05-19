@@ -38,6 +38,8 @@
 		17E477132093687E0055BB04 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E477122093687E0055BB04 /* MainViewController.swift */; };
 		17E477172094AF240055BB04 /* AudioStreamingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E477162094AF240055BB04 /* AudioStreamingDelegate.swift */; };
 		82DA583E591FE9BCB50F3080 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F7C0D94FA228CC4BAAD8BF /* Pods_testTests.framework */; };
+		849D9DFA20B063EE00769D7E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 849D9DF920B063EE00769D7E /* Storyboard.storyboard */; };
+		849D9DFC20B064B200769D7E /* PlaylistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849D9DFB20B064B200769D7E /* PlaylistTableViewController.swift */; };
 		9DB6153FF5445B384EAAC002 /* Pods_JukeboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3ECF3071423D13190531757 /* Pods_JukeboxTests.framework */; };
 		C4645088A84BBCB6F01CA487 /* Pods_Jukebox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1ECE11E4B242C6792A699A /* Pods_Jukebox.framework */; };
 		FC1FEB51B1A4AB8241018875 /* Pods_JukeboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848CDF25A649EBAB14DE53B /* Pods_JukeboxUITests.framework */; };
@@ -105,6 +107,8 @@
 		336E6E34BCBCE0FEFB6AC10E /* Pods-testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testUITests/Pods-testUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4455B35B4AF83C659B8A1DBB /* Pods-JukeboxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JukeboxTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JukeboxTests/Pods-JukeboxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		450AED2381BD86D1C6BDBF29 /* Pods-JukeboxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JukeboxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JukeboxTests/Pods-JukeboxTests.release.xcconfig"; sourceTree = "<group>"; };
+		849D9DF920B063EE00769D7E /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		849D9DFB20B064B200769D7E /* PlaylistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewController.swift; sourceTree = "<group>"; };
 		9A6E8DCA0DCA95CD1A378DE9 /* Pods-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.release.xcconfig"; sourceTree = "<group>"; };
 		9C8F71C627D8AF65BE7B1215 /* Pods-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.release.xcconfig"; sourceTree = "<group>"; };
 		B34A69483977F006B24C8A61 /* Pods_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +195,7 @@
 		1762A2962090B3B1003C868A /* Jukebox */ = {
 			isa = PBXGroup;
 			children = (
+				849D9DF820B063C500769D7E /* PartyPlaylistOverview */,
 				17440D8720A324FC006D2B02 /* Auth */,
 				17CB208820A33C06003F1AAE /* PartyOverview */,
 				17CB209420A34BEA003F1AAE /* UserProfile */,
@@ -284,6 +289,15 @@
 				D848CDF25A649EBAB14DE53B /* Pods_JukeboxUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849D9DF820B063C500769D7E /* PartyPlaylistOverview */ = {
+			isa = PBXGroup;
+			children = (
+				849D9DF920B063EE00769D7E /* Storyboard.storyboard */,
+				849D9DFB20B064B200769D7E /* PlaylistTableViewController.swift */,
+			);
+			path = PartyPlaylistOverview;
 			sourceTree = "<group>";
 		};
 		8DABE579BCE462B05C3FA304 /* Pods */ = {
@@ -419,6 +433,7 @@
 				1762A2A22090B3B2003C868A /* LaunchScreen.storyboard in Resources */,
 				1762A2CA2090B8A7003C868A /* GoogleService-Info.plist in Resources */,
 				17CB208520A329DA003F1AAE /* Auth.storyboard in Resources */,
+				849D9DFA20B063EE00769D7E /* Storyboard.storyboard in Resources */,
 				1762A29F2090B3B2003C868A /* Assets.xcassets in Resources */,
 				1762A29D2090B3B1003C868A /* Main.storyboard in Resources */,
 			);
@@ -540,6 +555,7 @@
 				17CB209120A34BBF003F1AAE /* CreatePartyViewController.swift in Sources */,
 				1778DEC620A8895D001454C3 /* PartyCollectionViewCell.swift in Sources */,
 				17CB209320A34BCD003F1AAE /* JoinPartyViewController.swift in Sources */,
+				849D9DFC20B064B200769D7E /* PlaylistTableViewController.swift in Sources */,
 				1762A2982090B3B1003C868A /* AppDelegate.swift in Sources */,
 				17E477132093687E0055BB04 /* MainViewController.swift in Sources */,
 			);
