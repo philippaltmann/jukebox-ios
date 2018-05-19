@@ -15,6 +15,7 @@
 		1762A2A22090B3B2003C868A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1762A2A02090B3B2003C868A /* LaunchScreen.storyboard */; };
 		1762A2AD2090B3B2003C868A /* JukeboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762A2AC2090B3B2003C868A /* JukeboxTests.swift */; };
 		1762A2B82090B3B2003C868A /* testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1762A2B72090B3B2003C868A /* testUITests.swift */; };
+		1762A2CA2090B8A7003C868A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1762A2C92090B8A7003C868A /* GoogleService-Info.plist */; };
 		1762A2D32090D42A003C868A /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762A2D02090D42A003C868A /* SpotifyAuthentication.framework */; };
 		1762A2D42090D42A003C868A /* SpotifyMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762A2D12090D42A003C868A /* SpotifyMetadata.framework */; };
 		1762A2D52090D42A003C868A /* SpotifyAudioPlayback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1762A2D22090D42A003C868A /* SpotifyAudioPlayback.framework */; };
@@ -40,7 +41,6 @@
 		82DA583E591FE9BCB50F3080 /* Pods_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F7C0D94FA228CC4BAAD8BF /* Pods_testTests.framework */; };
 		9DB6153FF5445B384EAAC002 /* Pods_JukeboxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3ECF3071423D13190531757 /* Pods_JukeboxTests.framework */; };
 		C4645088A84BBCB6F01CA487 /* Pods_Jukebox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1ECE11E4B242C6792A699A /* Pods_Jukebox.framework */; };
-		E00B9E2F20B07DDE00E5A6F4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E00B9E2E20B07DDE00E5A6F4 /* GoogleService-Info.plist */; };
 		FC1FEB51B1A4AB8241018875 /* Pods_JukeboxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848CDF25A649EBAB14DE53B /* Pods_JukeboxUITests.framework */; };
 		FD2AE2652486FFFDBE43E42D /* Pods_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F39F65CA8FA019FAE9271139 /* Pods_testUITests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +77,7 @@
 		1762A2B32090B3B2003C868A /* JukeboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JukeboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1762A2B72090B3B2003C868A /* testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testUITests.swift; sourceTree = "<group>"; };
 		1762A2B92090B3B2003C868A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1762A2C92090B8A7003C868A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1762A2D02090D42A003C868A /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAuthentication.framework; sourceTree = "<group>"; };
 		1762A2D12090D42A003C868A /* SpotifyMetadata.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyMetadata.framework; sourceTree = "<group>"; };
 		1762A2D22090D42A003C868A /* SpotifyAudioPlayback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyAudioPlayback.framework; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		CEB621CFBA251214BE1832FE /* Pods-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test/Pods-test.debug.xcconfig"; sourceTree = "<group>"; };
 		D848CDF25A649EBAB14DE53B /* Pods_JukeboxUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JukeboxUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF6F54865A37210B6F26CB37 /* Pods-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testTests/Pods-testTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E00B9E2E20B07DDE00E5A6F4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0CDF4BEAF4A874495108DFE /* Pods-Jukebox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jukebox.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jukebox/Pods-Jukebox.release.xcconfig"; sourceTree = "<group>"; };
 		EC1ECE11E4B242C6792A699A /* Pods_Jukebox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jukebox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25CB285E6CB78F3F952B3CB /* Pods-JukeboxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JukeboxUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JukeboxUITests/Pods-JukeboxUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 				17E477162094AF240055BB04 /* AudioStreamingDelegate.swift */,
 				1762A29E2090B3B2003C868A /* Assets.xcassets */,
 				1762A2A32090B3B2003C868A /* Info.plist */,
-				E00B9E2E20B07DDE00E5A6F4 /* GoogleService-Info.plist */,
+				1762A2C92090B8A7003C868A /* GoogleService-Info.plist */,
 				1762A2DE2090FDC4003C868A /* Constants.swift */,
 				1762A2E020910290003C868A /* NotificationConstants.swift */,
 				17CB208F20A34670003F1AAE /* Spotify SDK */,
@@ -426,9 +426,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17CB209820A34C35003F1AAE /* UserProfile.storyboard in Resources */,
-				E00B9E2F20B07DDE00E5A6F4 /* GoogleService-Info.plist in Resources */,
 				17CB209620A34C1D003F1AAE /* PartyOverview.storyboard in Resources */,
 				1762A2A22090B3B2003C868A /* LaunchScreen.storyboard in Resources */,
+				1762A2CA2090B8A7003C868A /* GoogleService-Info.plist in Resources */,
 				17CB208520A329DA003F1AAE /* Auth.storyboard in Resources */,
 				1762A29F2090B3B2003C868A /* Assets.xcassets in Resources */,
 				1762A29D2090B3B1003C868A /* Main.storyboard in Resources */,
