@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import <SVGKit/SVGKit.h>
+import <SVGKit/SVGKImage.h>
 
 class PlaylistTableViewController: UITableViewController {
 
