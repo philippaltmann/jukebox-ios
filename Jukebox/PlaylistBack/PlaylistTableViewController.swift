@@ -50,7 +50,11 @@ class PlaylistTableViewController: UITableViewController {
         
     }
     
-    
+    @IBAction func showTrackDetails(_sender: UIButton){
+        
+        //öffnen eines Optionsmenüs für die einzelen Songs z.B.: Like, Skip, show Interpret etc.
+        
+    }
     
    // Search, Add, Play(only admin), Show number of votes, Delete(only admin), Skip(only admin), Statistics?(only admin)
 }
