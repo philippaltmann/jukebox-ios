@@ -91,5 +91,24 @@ class PlaylistTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func back(_ sender: UIBarButtonItem) {
+    }
+    @IBAction func search(_ sender: UIBarButtonItem) {
+    }
+    
+    
+    @IBAction func play(_sender: UIButton){
+    }
+
+    @IBAction func skip(_sender: UIButton) {
+    }
+
+    @IBOutlet var skipButton: UIButton!
+    @IBOutlet var playButton: UIButton!
+    @IBOutlet var backButton: UIBarButtonItem!
+    @IBOutlet var searchButton: UIBarButtonItem!
+    
+    
 
 }
