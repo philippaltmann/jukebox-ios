@@ -13,6 +13,7 @@ class PlaylistTableViewController: UITableViewController {
     @IBOutlet weak var playButton: UIButton?
     @IBOutlet weak var skipButton: UIButton?
     @IBOutlet weak var optionsButton: UIButton?
+    @IBOutlet weak var searchButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,6 @@ class PlaylistTableViewController: UITableViewController {
     @IBAction func likedPlaylistComponent(_sender: UIButton){
         
         //Zugriff auf Firebase Datenbank
-        
         //Inkrementieren des Counters für likes!
         
     }
@@ -44,5 +44,13 @@ class PlaylistTableViewController: UITableViewController {
         
     }
     
-   
+    @IBAction func searchForTrack(_sender: UIButton){
+        
+        //öffnen eines Optionsmenüs für die einzelen Songs z.B.: Like, Skip, show Interpret etc.
+        
+    }
+    
+    
+    
+   // Search, Add, Play(only admin), Show number of votes, Delete(only admin), Skip(only admin), Statistics?(only admin)
 }
